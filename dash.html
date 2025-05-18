@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IT Course Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #ffe6f0, #fff0f5);
+      color: #ff69b4;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    aside {
+      width: 240px;
+      background: #ffccdc;
+      border-right: 5px dotted #ff69b4;
+      padding: 30px 20px;
+    }
+
+    aside h2 {
+      font-size: 22px;
+      color: #ff69b4;
+      margin-bottom: 30px;
+      border-bottom: 3px dashed #ff69b4;
+      padding-bottom: 10px;
+      font-family: 'Pacifico', cursive;
+    }
+
+    nav a {
+      display: block;
+      padding: 12px 15px;
+      margin-bottom: 10px;
+      text-decoration: none;
+      background: white;
+      color: #ff69b4;
+      border: 2px dashed #ff69b4;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ffe6f0;
+      transform: scale(1.05);
+    }
+
+    main {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .topbar h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 36px;
+      color: #ff69b4;
+      text-shadow: 2px 2px #ffa6c9;
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .user-info span {
+      color: #ff69b4;
+      font-weight: bold;
+    }
+
+    .user-info img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 3px dashed #ff69b4;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: #fff0f5;
+      padding: 20px;
+      border-radius: 20px;
+      border: 2px dashed #ffa6c9;
+      box-shadow: 0 4px 10px rgba(255, 182, 193, 0.5);
+    }
+
+    .card h3 {
+      color: #ff69b4;
+      margin-bottom: 10px;
+      font-family: 'Pacifico', cursive;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff0f5;
+      border-radius: 10px;
+      overflow: hidden;
+      font-size: 14px;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px dashed #ffb6c1;
+      text-align: left;
+      color: #ff69b4;
+    }
+
+    thead {
+      background: #ffe6f0;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #fff5f9;
+    }
+
+    @media (max-width: 768px) {
+      .topbar {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <aside>
+    <h2>Navigation</h2>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="about me.html"><i class="fas fa-user"></i> About Me</a>
+    <a href="gallery.html"><i class="fas fa-image"></i> Gallery</a>
+    <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+    <a href="dash.html"><i class="fas fa-chart-line"></i> Dashboard</a>
+     <a href="space.html" id="menu-button"><i class="fas fa-bars"></i> Menu</a>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="topbar">
+      <h1>IT Course Dashboard</h1>
+      <div class="user-info">
+        <span>student</span>
+        <img src="profile pic.JPG" alt="User Avatar">
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Student Information</h3>
+        <p><strong>ID:</strong> 202412884</p>
+        <p><strong>Year Level:</strong> 1st Year</p>
+        <p><strong>Course:</strong> BS Information Technology</p>
+      </div>
+
+      <div class="card">
+        <h3>Announcements</h3>
+        <ul>
+          <li>📚 Finals Week: May 27 - 31</li>
+          <li>🗂️ Project Deadline: May 24</li>
+          <li>🎉 AdU IT Week: June 10 - 14</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Enrolled Subjects & Grades</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Subject Code</th>
+            <th>Subject Name</th>
+            <th>Units</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>IT128L</td>
+            <td>Web Design</td>
+            <td>3</td>
+            <td>89</td>
+          </tr>
+          <tr>
+            <td>IT125L</td>
+            <td>Computer Programming</td>
+            <td>3</td>
+            <td>92</td>
+          </tr>
+          <tr>
+            <td>PY111</td>
+            <td>Understanding Self</td>
+            <td>3</td>
+            <td>85</td>
+          </tr>
+          <tr>
+            <td>IT126L</td>
+            <td>Data Structure Algorithm</td>
+            <td>3</td>
+            <td>90</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</body>
+</html>
